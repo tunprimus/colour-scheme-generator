@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Colour Scheme Generator</title>
+	<link rel="stylesheet" href="./src/css/style.css">
 </head>
-<body>
+<body class="body">
 	<div class="body-container">
 		<header class="header"></header>
 		<main class="main">
@@ -17,25 +18,26 @@
 						<legend class="legend">Colour Picker</legend>
 						<div class="colour-picker-container">
 							<label for="colour-picker" class="label colour-picker__label">Colour</label>
-							<input type="color" name="colour-picker" id="colour-picker" class="colour-picker" value="#0000FF">
+							<input type="color" name="colour-picker" id="colour-picker" class="input colour-picker" value="#0000FF">
 						</div>
 					</fieldset>
 					<fieldset class="form-fieldset colour-slider">
 						<legend class="legend">HSL Colour Sliders</legend>
 						<div class="colour-slider-container">
 							<label for="hue-slider" class="label hue-slider__label">Hue:</label>
-							<input type="range" name="hue-slider" id="hue-slider" class="hue-slider" min="0" max="360" step="1" value="240">
+							<input type="range" name="hue-slider" id="hue-slider" class="input hue-slider" min="0" max="360" step="1" value="240">
 							<label for="sat-slider" class="label sat-slider__label">Saturation:</label>
-							<input type="range" name="sat-slider" id="sat-slider" class="sat-slider" min="0" max="100" step="1" value="100">
+							<input type="range" name="sat-slider" id="sat-slider" class="input sat-slider" min="0" max="100" step="1" value="100">
 							<label for="light-slider" class="label light-slider__label">Lightness:</label>
-							<input type="range" name="light-slider" id="light-slider" class="light-slider" min="0" max="100" step="1" value="50">
+							<input type="range" name="light-slider" id="light-slider" class="input light-slider" min="0" max="100" step="1" value="50">
+							<button type="reset" id="reset-sliders" class="button reset-sliders">Reset</button>
 						</div>
 					</fieldset>
 					<fieldset class="form-fieldset colour-radios">
-						<legend class="legend">Please select of the default colours</legend>
+						<legend class="legend">Please select one of the default colours</legend>
 						<div class="radios-container">
 							<label for="radio-agate-grey" class="label radio__label">Agate grey</label>
-							<input type="radio" name="colour-scheme-default" id="radio-agate-grey" class="radio-agate-grey" value="agate-grey">
+							<input type="radio" name="colour-scheme-default" id="radio-agate-grey" class="input radio-agate-grey" value="agate-grey">
 						</div>
 					</fieldset>
 				</form>
