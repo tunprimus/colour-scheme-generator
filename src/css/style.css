@@ -485,8 +485,8 @@
 	--layout-gap-L: clamp(3rem, 8vmax, 4rem);
 	--layout-gap-XL: clamp(6rem, 16vmax, 8rem);
 
-	--flexbox-albatross-margin: 1rem;
-	--flexbox-albatross-container-size: 40rem;
+	--flexbox-albatross-margin: 0.1rem;
+	--flexbox-albatross-container-size: 30rem;
 	--flexbox-albatross-modifier: calc(var(--flexbox-albatross-container-size) - 100%);
 	/*-- End of paddings, margins and gaps --*/
 
@@ -1013,6 +1013,32 @@ select:disabled {
 	--input-border: var(--text-grey25);
 	background-color: var(--text-grey75);
 	cursor: not-allowed;
+}
+
+.radios-container {
+	--radio-container-layout-min: 10ch;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	line-height: 1.067;
+}
+
+.radios-container > * {
+	flex: 1 1 var(--radio-container-layout-min);
+	margin: 0.5rem;
+}
+
+.radios-container > .radio__label {
+	flex: 10 1 10ch;
+}
+
+.radio__label {
+	border: 0.0625rem solid blue;
+}
+
+.radio__input {
+	border: 0.0625rem solid red;
 }
 
 
