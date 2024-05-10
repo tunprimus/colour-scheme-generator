@@ -497,6 +497,8 @@
 	--border-radius-circle-value: 50%;
 	--border-radius-elliptic-value: 25%;
 
+	--radio-input-size: 18px;
+
 	tab-size: 4 !important;
 	color-scheme: light dark;
 }
@@ -749,6 +751,11 @@ input[type="number"],
 select,
 textarea {
 	font-size: 16px;
+}
+
+input,
+label {
+  cursor: pointer;
 }
 
 [type="number"] {
@@ -1016,30 +1023,30 @@ select:disabled {
 }
 
 .radios-container {
-	--radio-container-layout-min: 10ch;
-
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap;
-	align-items: flex-start;
-	line-height: 1.067;
+	align-items: center;
+	max-height: 45vh;
+	overflow-y: auto;
 }
 
-.radios-container > * {
-	flex: 1 1 var(--radio-container-layout-min);
-	margin: 0.5rem;
-}
-
-.radios-container > .radio__label {
-	flex: 10 1 10ch;
-}
-
-.radio__label {
-	border: 0.0625rem solid blue;
+.radio__label,
+.radio__input {
+	margin: 0;
 }
 
 .radio__input {
-	border: 0.0625rem solid red;
+	width: var(--radio-input-size);
 }
+
+.radio__label {
+	width: calc(100% - (var(--radio-input-size) * 2));
+	margin-left: calc(var(--radio-input-size) / 2);
+}
+
+
+
+
 
 
 
