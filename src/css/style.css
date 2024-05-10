@@ -555,8 +555,8 @@ body {
 	line-height: calc(1.618rem - (1.618 - 1.3) * ((100vw - 21rem) / (35 - 21)));
 	line-height: calc(3px + 2.5ex + 3px);
 	-webkit-font-smoothing: antialiased;
-	margin: var(--responsive-space--M);
-	padding: var(--responsive-space--M);
+	margin: var(--responsive-space--XXS);
+	padding: var(--responsive-space--XXS);
 	color: var(--theme-text-colour);
 }
 
@@ -988,6 +988,16 @@ select:disabled {
 .body-container {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 30rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section-output {
+	min-height: 45vmax;
+	height: 50%;
 }
 
 
@@ -1020,6 +1030,14 @@ select:disabled {
 	--input-border: var(--text-grey25);
 	background-color: var(--text-grey75);
 	cursor: not-allowed;
+}
+
+.form-fieldset {
+	margin-bottom: 1.618rem;
+}
+
+.colour-radios {
+	margin: auto;
 }
 
 .radios-container {
