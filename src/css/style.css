@@ -441,6 +441,8 @@
 	--theme-text-colour: hsl(0, 0%, var(--switch));
 	--accessible-colour-rgb: calc(((((var(--red) * 299) + (var(--green) * 587) + (var(--blue) * 114)) / 1000) - 128) * -1000);
 
+	--accordion-border-colour: hsl(0, 0%, 50%);
+
 	--font-stack-body: system-ui, -apple-system, BlinkMacSystemFont, ̈́"Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, SFProDisplay-Regular, Inter, "Fira Sans", "Open Sans", "Droid Sans", "Nimbus Sans", "DejaVu Sans", "Helvetica Neue", Helvetica, Arial, Poppins, Verdana, Tahoma, Arimo, sans-serif;
 
 	--min-font-size: 20;
@@ -893,6 +895,7 @@ pre {
 	white-space: pre-wrap;
 	word-break: break-all;
 }
+
 code,
 kbd,
 samp {
@@ -1010,6 +1013,80 @@ select:disabled {
 .section-output {
 	min-height: 45vmax;
 	height: 50%;
+}
+
+/**
+ * @section Details and Accordion
+ * Styling for details and accordion.
+ */
+ .details .summary {
+	cursor: pointer;
+}
+
+.details > .summary::-webkit-details-marker {
+	display: none;
+}
+
+.details {
+	border: 0.0625rem solid var(--theme-colour--tetrad3);
+	border-radius: var(--border-radius-value);
+	box-shadow: var(--box-shadow1);
+}
+
+.details > .summary {
+	list-style: none;
+	border: 0.0625rem solid var(--accordion-border-colour);
+	border-radius: var(--border-radius-value);
+	font-size: var(--fs0);
+	font-style: normal;
+	font-weight: 500;
+}
+
+.details > .summary:focus {
+	outline: none;
+}
+
+.details > .summary::before {
+	content: "";
+	display: inline-block;
+	width: 0.4rem;
+	height: 0.4rem;
+	border: 0.0625rem solid var(--accordion-border-colour);
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	margin-left: 0.3rem;
+	margin-right: 0.6rem;
+	transform: rotate(-45deg) translate(-20%, 20%);
+	transition: transform 0.3s;
+}
+
+.details[open] > .summary {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-width: thin;
+}
+
+
+.details[open] > :not(.summary) {
+	border-left: 0.0625rem solid var(--accordion-border-colour);
+	border-right: 0.0625rem solid var(--accordion-border-colour);
+}
+
+
+.details[open] {
+	border-left: 0.0625rem solid var(--accordion-border-colour);
+	border-right: 0.0625rem solid var(--accordion-border-colour);
+	background-color: var(--theme-colour--tetrad3);
+}
+
+.details[open] > :last-child {
+	border-bottom: 0.0625rem solid var(--accordion-border-colour);
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}
+
+.details[open] > .summary::before {
+	transform: rotate(135deg) translate(-20%, 20%);
 }
 
 
