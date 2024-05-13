@@ -1132,6 +1132,8 @@ select:disabled {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	max-height: 30vh;
+	overflow-y: auto;
 }
 
 .radios-container > * {
