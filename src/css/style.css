@@ -1028,14 +1028,15 @@ select:disabled {
 }
 
 .details {
-	border: 0.0625rem solid var(--theme-colour--tetrad3);
-	border-radius: var(--border-radius-value);
+	border: 0.1rem solid var(--theme-colour--tetrad3);
+	border-radius: calc(var(--border-radius-value) + var(--responsive-space--XXS)); /* https://twitter.com/lilykonings/status/1567317037126680576/photo/1 */
 	box-shadow: var(--box-shadow1);
+	padding: var(--responsive-space--XXS);
 }
 
 .details > .summary {
 	list-style: none;
-	border: 0.0625rem solid var(--accordion-border-colour);
+	border: 0.1rem solid var(--theme-colour--tetrad3);
 	border-radius: var(--border-radius-value);
 	font-size: var(--fs0);
 	font-style: normal;
@@ -1051,7 +1052,7 @@ select:disabled {
 	display: inline-block;
 	width: 0.4rem;
 	height: 0.4rem;
-	border: 0.0625rem solid var(--accordion-border-colour);
+	border: 0.1rem solid var(--theme-colour--tetrad3);
 	border-left-color: transparent;
 	border-bottom-color: transparent;
 	margin-left: 0.3rem;
@@ -1068,25 +1069,29 @@ select:disabled {
 
 
 .details[open] > :not(.summary) {
-	border-left: 0.0625rem solid var(--accordion-border-colour);
-	border-right: 0.0625rem solid var(--accordion-border-colour);
+	border-left: 0.1rem solid var(--theme-colour--tetrad3);
+	border-right: 0.1rem solid var(--theme-colour--tetrad3);
 }
 
 
 .details[open] {
-	border-left: 0.0625rem solid var(--accordion-border-colour);
-	border-right: 0.0625rem solid var(--accordion-border-colour);
+	border-left: 0.1rem solid var(--theme-colour--tetrad3);
+	border-right: 0.1rem solid var(--theme-colour--tetrad3);
 	background-color: var(--theme-colour--tetrad3);
 }
 
 .details[open] > :last-child {
-	border-bottom: 0.0625rem solid var(--accordion-border-colour);
+	border-bottom: 0.1rem solid var(--theme-colour--tetrad3);
 	border-bottom-left-radius: 0.5rem;
 	border-bottom-right-radius: 0.5rem;
 }
 
 .details[open] > .summary::before {
 	transform: rotate(135deg) translate(-20%, 20%);
+}
+
+.colour-radios {
+	margin-top: var(--responsive-space--M);
 }
 
 
