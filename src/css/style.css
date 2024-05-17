@@ -265,14 +265,14 @@
 	--yellow-ochre: #c79b00;
 	--yellow-ochre: rgb(199, 156, 0);
 
-	/** --indigo: hsl(275, 100%, 25%); */
-	--hue: 275;
+	/** --ivory: hsl(60, 100%, 97%); */
+	--hue: 60;
 	--sat: 100%;
-	--lig: 25%;
-	/** --indigo: rgb(74, 0, 128); */
-	--red: 74;
-	--green: 0;
-	--blue: 128;
+	--lig: 97%;
+	/** ---ivory: rgb(255, 255, 240); */
+	--red: 255;
+	--green: 255;
+	--blue: 240;
 	/**
 	* Jewel palette safe saturation between 73 - 83
 	*/
@@ -550,6 +550,8 @@ html {
 }
 
 body {
+	margin: 0;
+	padding: 0;
 	height: auto; /* Allows content to grow beyond the page without overflow */
 	width: auto; /* Allows content to grow beyond the page without overflow */
 	min-height: 100%; /* Starts web page with 100% height. Fallback for IE 4-6 and older browsers */
