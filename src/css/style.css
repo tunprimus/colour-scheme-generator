@@ -265,14 +265,17 @@
 	--yellow-ochre: #c79b00;
 	--yellow-ochre: rgb(199, 156, 0);
 
+	/** --blue: hsl(240, 100%, 50%);
+	--blue: #0000FF;
+	--blue: rgb(0, 0, 255); */
 	/** --ivory: hsl(60, 100%, 97%); */
-	--hue: 60;
+	--hue: 240;
 	--sat: 100%;
-	--lig: 97%;
+	--lig: 50%;
 	/** ---ivory: rgb(255, 255, 240); */
-	--red: 255;
-	--green: 255;
-	--blue: 240;
+	--red: 0;
+	--green: 0;
+	--blue: 255;
 	/**
 	* Jewel palette safe saturation between 73 - 83
 	*/
@@ -536,9 +539,15 @@
 }
 
 /* CSS Height That Works in Both Modern and Legacy Browsers | https://stackoverflow.com/a/65836306 */
+/**
+* @author: Leonid Fenko
+* @link: https://dev.to/fenok/stretching-body-to-full-viewport-height-the-missing-way-2ghd
+*/
+
 html {
-	height: 100%; /* Fallback CSS for IE 4-6 and older browsers. Note: Without this setting, body below cannot achieve 100% height. */
-	height: 100vh; /* Overrides 100% height in modern HTML5 browsers and uses the viewport's height. Only works in modern HTML5 browsers */
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
 	font-size: calc(15px + 0.390625vw);
 	font-size: var(--custom-font-size-7);
 	scroll-behavior: smooth;
@@ -550,13 +559,7 @@ html {
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	height: auto; /* Allows content to grow beyond the page without overflow */
-	width: auto; /* Allows content to grow beyond the page without overflow */
-	min-height: 100%; /* Starts web page with 100% height. Fallback for IE 4-6 and older browsers */
-	min-height: 100vh; /* Starts web page with 100% height. Uses the viewport's height. Only works in modern HTML5 browsers */
-	/** overflow-y: scroll; Optional: Adds an empty scrollbar to the right margin in case content grows vertically, creating a scrollbar.  Allows for better width calculations, as the browser pre-calculates width before scrollbar appears, avoiding page content shifting. */
+	flex-grow: 1;
 	font-family: var(--font-stack-body);
 	line-height: var(--golden-ratio);
 	line-height: calc(1.618rem - (1.618 - 1.3) * ((100vw - 21rem) / (35 - 21)));
@@ -586,10 +589,7 @@ aside,
 details,
 figcaption,
 figure,
-footer,
-header,
 hgroup,
-main,
 nav,
 section {
 	display: block;
@@ -990,8 +990,6 @@ select:disabled {
 /*-- End of Resets --*/
 
 .body {
-	margin: var(--responsive-space--XXS);
-	padding: var(--responsive-space--XXS);
 	background-color: var(--theme-colour--analogue1);
 	background: linear-gradient(110deg, var(--theme-colour--analogue1), var(--theme-colour--analogue2), var(--theme-colour--analogue3));
 	color: var(--theme-text-colour);
@@ -1000,17 +998,31 @@ select:disabled {
 .body-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	/** justify-content: space-around; */
 	align-items: center;
 	max-width: 30rem;
 	margin-left: auto;
 	margin-right: auto;
-	padding: var(--responsive-space--XS);
 	background-color: var(--theme-colour);
 }
 
+.header,
+.main,
+.footer {
+	width: 100%;
+	padding: var(--responsive-space--XS);
+}
+
+.header {
+	background-color: var(--blue);
+	background-color: yellow;
+	border: 1rem solid red;
+}
+
 .main {
+	flex-grow: 1;
 	margin-bottom: var(--responsive-space);
+	background-color: var(--linen);
 }
 
 .section-output {
@@ -1018,11 +1030,16 @@ select:disabled {
 	height: 50%;
 }
 
+.section-input {
+	border-radius: var(--border-radius-value);
+}
+
 /**
  * @section Details and Accordion
  * Styling for details and accordion.
  */
- .details .summary {
+
+.details .summary {
 	cursor: pointer;
 }
 
@@ -1030,68 +1047,70 @@ select:disabled {
 	display: none;
 }
 
+.summary {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--responsive-space--XXS) var(--responsive-space--XS);
+	font-weight: bold;
+	color: #30353B;
+}
+
+.summary::after {
+	content: "\2795";
+	transition: 0.3s;
+}
+
+.details[open] > .summary {
+	background-color: var(--theme-colour--analogue1);
+	border-bottom: 0.125rem solid #FFF9F1;
+	border-radius: calc(var(--border-radius-value) + var(--responsive-space--XXS)); /* https://twitter.com/lilykonings/status/1567317037126680576/photo/1 */
+}
+
+.details[open] > .summary::after {
+	transform: rotate(-180deg);
+	content: "\2796";
+}
+
 .details {
-	border: 0.1rem solid var(--theme-colour--tetrad3);
+	background-color: #EEEBDC;
+	border: 0.01rem solid var(--theme-colour--analogue1);
 	border-radius: calc(var(--border-radius-value) + var(--responsive-space--XXS)); /* https://twitter.com/lilykonings/status/1567317037126680576/photo/1 */
 	box-shadow: var(--box-shadow1);
 	padding: var(--responsive-space--XXS);
 }
 
-.details > .summary {
-	list-style: none;
-	border: 0.1rem solid var(--theme-colour--tetrad3);
-	border-radius: var(--border-radius-value);
-	font-size: var(--fs0);
-	font-style: normal;
-	font-weight: 500;
+.details[open] {
+	background-color: var(--theme-colour--analogue2, #FF00FF);
+}
+
+.form-fieldset {
+	opacity: 0;
+	margin-bottom: 1.618rem;
+}
+
+.details[open] .form-fieldset {
+	animation: fade-in 0.3s linear forwards;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .details > .summary:focus {
 	outline: none;
 }
 
-.details > .summary::before {
-	content: "";
-	display: inline-block;
-	width: 0.4rem;
-	height: 0.4rem;
-	border: 0.1rem solid var(--theme-colour--tetrad3);
-	border-left-color: transparent;
-	border-bottom-color: transparent;
-	margin-left: 0.3rem;
-	margin-right: 0.6rem;
-	transform: rotate(-45deg) translate(-20%, 20%);
-	transition: transform 0.3s;
+.summary:focus-visible {
+	outline: 0.1875rem dotted #FF0060;
 }
 
-.details[open] > .summary {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	border-bottom-width: thin;
-}
-
-
-.details[open] > :not(.summary) {
-	border-left: 0.1rem solid var(--theme-colour--tetrad3);
-	border-right: 0.1rem solid var(--theme-colour--tetrad3);
-}
-
-
-.details[open] {
-	border-left: 0.1rem solid var(--theme-colour--tetrad3);
-	border-right: 0.1rem solid var(--theme-colour--tetrad3);
-	background-color: var(--theme-colour--tetrad3);
-}
-
-.details[open] > :last-child {
-	border-bottom: 0.1rem solid var(--theme-colour--tetrad3);
-	border-bottom-left-radius: 0.5rem;
-	border-bottom-right-radius: 0.5rem;
-}
-
-.details[open] > .summary::before {
-	transform: rotate(135deg) translate(-20%, 20%);
-}
 
 
 /**
@@ -1123,10 +1142,6 @@ select:disabled {
 	--input-border: var(--text-grey25);
 	background-color: var(--text-grey75);
 	cursor: not-allowed;
-}
-
-.form-fieldset {
-	margin-bottom: 1.618rem;
 }
 
 .radios-container {
@@ -1207,7 +1222,8 @@ input[type="radio"]:checked + label {
 
 
 .footer {
-	padding: var(--responsive-space--XXS);
+	align-self: flex-end;
+	background-color: green;
 }
 
 
