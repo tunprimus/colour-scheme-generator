@@ -459,6 +459,7 @@
 	/* Column size */
 	--grid-min: 30ch;
 	--grid-min--1: 20ch;
+	--grid-min--2: 10ch;
 	--flex-min: 35rem;
 	--pancake-min: var(--grid-min);
 	--max-number-of-column: 4;
@@ -1026,8 +1027,15 @@ select:disabled {
 }
 
 .section-output {
+	display: flex;
+	flex-wrap: wrap;
 	min-height: 45vmax;
 	height: 50%;
+	background-color: var(--dual-theme-grey);
+}
+
+.section-output > * {
+	flex: 1 1 var(--grid-min--2);
 }
 
 .section-input {
