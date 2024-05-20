@@ -1002,6 +1002,7 @@ select:disabled {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: var(--linen);
+	border-radius: var(--border-radius-value--M);
 	position: relative;
 }
 
@@ -1018,6 +1019,8 @@ select:disabled {
 
 .header {
 	background-color: var(--theme-colour);
+	border-top-left-radius: var(--border-radius-value--M);
+	border-top-right-radius: var(--border-radius-value--M);
 }
 
 .main {
@@ -1244,6 +1247,9 @@ input[type="radio"]:checked + label {
 	align-self: flex-end;
 	padding: var(--responsive-space--XXS) var(--responsive-space--XS);
 	background-color: var(--theme-colour--tint20, hsl(240, 100%, 70%));
+	border-bottom-left-radius: var(--border-radius-value--M);
+	border-bottom-right-radius: var(--border-radius-value--M);
+	text-align: center;
 }
 
 
