@@ -568,10 +568,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-* + * {
-	margin-top: 1.618rem;
-}
-
 h1,
 h2,
 h3,
@@ -1002,9 +998,15 @@ select:disabled {
 	/** justify-content: space-around; */
 	align-items: center;
 	max-width: 30rem;
+	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: var(--theme-colour);
+	background-color: var(--linen);
+	position: relative;
+}
+
+.body-container > * {
+	flex-grow: 1;
 }
 
 .header,
@@ -1015,13 +1017,10 @@ select:disabled {
 }
 
 .header {
-	background-color: var(--blue);
-	background-color: yellow;
-	border: 1rem solid red;
+	background-color: var(--theme-colour);
 }
 
 .main {
-	flex-grow: 1;
 	margin-bottom: var(--responsive-space);
 	background-color: var(--linen);
 }
@@ -1029,13 +1028,20 @@ select:disabled {
 .section-output {
 	display: flex;
 	flex-wrap: wrap;
-	min-height: 45vmax;
-	height: 50%;
+	justify-content: center;
+	min-height: 45vh;
 	background-color: var(--dual-theme-grey);
 }
 
 .section-output > * {
 	flex: 1 1 var(--grid-min--2);
+}
+
+.output-div {
+	outline: 0.01rem solid white;
+	font-size: 0.618rem;
+	align-self: auto;
+	text-align: center;
 }
 
 .section-input {
@@ -1067,7 +1073,7 @@ select:disabled {
 
 .summary::after {
 	content: "\2795";
-	transition: 0.3s;
+	transition: 0.618s;
 }
 
 .details[open] > .summary {
