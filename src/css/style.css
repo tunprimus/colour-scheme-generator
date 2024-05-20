@@ -1048,6 +1048,10 @@ select:disabled {
 	border-radius: var(--border-radius-value);
 }
 
+.inputs-form > .details {
+	margin-top: var(--responsive-space--S);
+}
+
 /**
  * @section Details and Accordion
  * Styling for details and accordion.
@@ -1078,6 +1082,7 @@ select:disabled {
 
 .details[open] > .summary {
 	background-color: var(--theme-colour--analogue1);
+	background-color: var(--theme-colour--tint30);
 	border-bottom: 0.125rem solid #FFF9F1;
 	border-radius: calc(var(--border-radius-value) + var(--responsive-space--XXS)); /* https://twitter.com/lilykonings/status/1567317037126680576/photo/1 */
 }
@@ -1237,7 +1242,8 @@ input[type="radio"]:checked + label {
 
 .footer {
 	align-self: flex-end;
-	background-color: green;
+	padding: var(--responsive-space--XXS) var(--responsive-space--XS);
+	background-color: var(--theme-colour--tint20, hsl(240, 100%, 70%));
 }
 
 
