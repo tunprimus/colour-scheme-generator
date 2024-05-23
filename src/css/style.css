@@ -1258,13 +1258,13 @@ input[type="radio"]:checked + label {
 /*              MEDIA QUERIES             */
 /* -------------------------------------- */
 /* Tablet portrait only */
-@media (min-width: 600px) and (max-width: 899px) {}
+@media (min-width: 600px) and (max-width: 899px) {/**...*/}
 /* Tablet landscape only */
-@media (min-width: 900px) and (max-width: 1199px) {}
+@media (min-width: 900px) and (max-width: 1199px) {/**...*/}
 /* Desktop only */
-@media (min-width: 1200px) and (max-width: 1799px) {}
+@media (min-width: 1200px) and (max-width: 1799px) {/**...*/}
 /* Big desktop upwards */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {/**...*/}
 
 /* Prevent scaling beyond this breakpoint */
 @media (min-width: 2560px) {
