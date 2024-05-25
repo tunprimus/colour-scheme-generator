@@ -1062,20 +1062,23 @@ select:disabled {
 .section-output {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: flex-start;
+	align-items: stretch;
 	min-height: 45vh;
 	background-color: var(--dual-theme-grey);
 }
 
 .section-output > * {
-	flex: 1 1 var(--grid-min--2);
+	flex: 0 1 var(--grid-min--2);
 }
 
 .output-div {
 	outline: 0.01rem solid white;
-	font-size: 0.618rem;
 	align-self: auto;
+	font-size: var(--fs-2);
+	line-height: var(--minor-third);
 	text-align: center;
+	vertical-align: middle;
 }
 
 .section-input {
