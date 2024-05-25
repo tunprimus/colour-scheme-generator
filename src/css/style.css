@@ -1066,11 +1066,12 @@ select:disabled {
 	justify-content: flex-start;
 	align-items: stretch;
 	min-height: 45vh;
-	background-color: var(--dual-theme-grey);
+	background-color: transparent;
 }
 
 .section-output > * {
 	flex: 0 1 var(--grid-min--2);
+	background-color: var(--dual-theme-grey);
 }
 
 .output-div {
