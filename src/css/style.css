@@ -1432,11 +1432,15 @@ input[type="radio"]:checked + label {
 
 
 .footer {
-	align-self: flex-end;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: var(--responsive-space--XXS) var(--responsive-space--XS);
 	background-color: var(--theme-colour--tint20, hsl(240, 100%, 70%));
 	border-bottom-left-radius: var(--border-radius-value--M);
 	border-bottom-right-radius: var(--border-radius-value--M);
+	font-size: var(--fs-1);
+	line-height: var(--minor-third);
 	text-align: center;
 }
 
