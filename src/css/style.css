@@ -1467,10 +1467,6 @@ input[type="radio"]:checked + label {
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--cocoa-brown: #1E1917;
-		--cocoa-brown: hsl(17, 13%, 10%);
-	}
 	html, body {
 		background-color: var(--cocoa-brown);
 	}
