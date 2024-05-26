@@ -374,38 +374,22 @@
 
 	--colour-wheel-range: 360;
 
-	--hue-cpl: calc((var(--hue) + 180) - var(--colour-wheel-range));
-
-	--hue-split-cpl-1: calc((var(--hue) + 150) - var(--colour-wheel-range));
-	--hue-split-cpl-2: calc((var(--hue) + 210) - var(--colour-wheel-range));
-
-	--hue-triad-1: calc((var(--hue) + 120) - var(--colour-wheel-range));
-	--hue-triad-2: calc((var(--hue) + 240) - var(--colour-wheel-range));
-
-	--hue-tetrad-1: calc((var(--hue) + 90) - var(--colour-wheel-range));
-	--hue-tetrad-2: calc((var(--hue) + 180) - var(--colour-wheel-range));
-	--hue-tetrad-3: calc((var(--hue) + 270) - var(--colour-wheel-range));
-
-	--hue-analog-1: calc((var(--hue) + 30) - var(--colour-wheel-range));
-	--hue-analog-2: calc((var(--hue) + 60) - var(--colour-wheel-range));
-	--hue-analog-3: calc((var(--hue) + 90) - var(--colour-wheel-range));
-
 	/** */
 	--theme-colour: hsl(var(--hue), var(--sat), var(--lig));
 	--lighten-percentage: 20%;
 	--darken-percentage: 15%;
 
-	--theme-colour--complement: hsl(var(--hue-cpl), var(--sat), var(--lig));
-	--theme-colour--complement-split1: hsl(var(--hue-split-cpl-1), var(--sat), var(--lig));
-	--theme-colour--complement-split2: hsl(var(--hue-split-cpl-2), var(--sat), var(--lig));
-	--theme-colour--triad1: hsl(var(--hue-triad-1), var(--sat), var(--lig));
-	--theme-colour--triad2: hsl(var(--hue-triad-2), var(--sat), var(--lig));
-	--theme-colour--tetrad1: hsl(var(--hue-tetrad-1), var(--sat), var(--lig));
-	--theme-colour--tetrad2: hsl(var(--hue-tetrad-2), var(--sat), var(--lig));
-	--theme-colour--tetrad3: hsl(var(--hue-tetrad-3), var(--sat), var(--lig));
-	--theme-colour--analogue1: hsl(var(--hue-analog-1), var(--sat), var(--lig));
-	--theme-colour--analogue2: hsl(var(--hue-analog-2), var(--sat), var(--lig));
-	--theme-colour--analogue3: hsl(var(--hue-analog-3), var(--sat), var(--lig));
+	--theme-colour--complement: hsl(calc(var(--hue) + 180), var(--sat), var(--lig));
+	--theme-colour--complement--split1: hsl(calc(var(--hue) + 150), var(--sat), var(--lig));
+	--theme-colour--complement--split2: hsl(calc(var(--hue) + 210), var(--sat), var(--lig));
+	--theme-colour--triad1: hsl(calc(var(--hue) + 120), var(--sat), var(--lig));
+	--theme-colour--triad2: hsl(calc(var(--hue) + 240), var(--sat), var(--lig));
+	--theme-colour--tetrad1: hsl(calc(var(--hue) + 90), var(--sat), var(--lig));
+	--theme-colour--tetrad2: hsl(calc(var(--hue) + 180), var(--sat), var(--lig));
+	--theme-colour--tetrad3: hsl(calc(var(--hue) + 270), var(--sat), var(--lig));
+	--theme-colour--analogue1: hsl(calc(var(--hue) + 30), var(--sat), var(--lig));
+	--theme-colour--analogue2: hsl(calc(var(--hue) + 60), var(--sat), var(--lig));
+	--theme-colour--analogue3: hsl(calc(var(--hue) + 90), var(--sat), var(--lig));
 
 	--theme-colour--tint10: hsl(var(--hue), var(--sat), calc(var(--lig) + var(--scale-10)));
 	--theme-colour--tint20: hsl(var(--hue), var(--sat), calc(var(--lig) + var(--scale-20)));
@@ -1060,6 +1044,14 @@ select:disabled {
 	background-color: var(--linen);
 }
 
+/* ================================================ */
+
+/**
+ * @section Display Outputs
+ * Styling for output divs.
+ */
+
+
 .section-output {
 	display: flex;
 	flex-wrap: wrap;
@@ -1075,13 +1067,216 @@ select:disabled {
 }
 
 .output-div {
-	outline: 0.01rem solid white;
+	outline: 0.033rem dotted white;
 	align-self: auto;
 	font-size: var(--fs-2);
 	line-height: var(--minor-third);
 	text-align: center;
 	vertical-align: middle;
 }
+
+.output-div__theme {
+	background-color: var(--theme-colour);
+}
+
+.output-div__accent-light1 {
+	background-color: var(--accent-1-light-theme);
+}
+
+.output-div__accent-light2 {
+	background-color: var(--accent-2-light-theme);
+}
+
+.output-div__accent-dark1 {
+	background-color: var(--accent-1-dark-theme);
+}
+
+.output-div__accent-dark2 {
+	background-color: var(--accent-2-dark-theme);
+}
+
+.output-div__complement {
+	background-color: var(--theme-colour--complement);
+}
+
+.output-div__complement--split1 {
+	background-color: var(--theme-colour--complement--split1);
+}
+
+.output-div__complement--split2 {
+	background-color: var(--theme-colour--complement--split2);
+}
+
+.output-div__triad1 {
+	background-color: var(--theme-colour--triad1);
+}
+
+.output-div__triad2 {
+	background-color: var(--theme-colour--triad2);
+}
+
+.output-div__triad3 {
+	background-color: var(--theme-colour--triad3);
+}
+
+.output-div__tetrad1 {
+	background-color: var(--theme-colour--tetrad1);
+}
+
+.output-div__tetrad2 {
+	background-color: var(--theme-colour--tetrad2);
+}
+
+.output-div__tetrad3 {
+	background-color: var(--theme-colour--tetrad3);
+}
+
+.output-div__analogue1 {
+	background-color: var(--theme-colour--analogue1);
+}
+
+.output-div__analogue2 {
+	background-color: var(--theme-colour--analogue2);
+}
+
+.output-div__analogue3 {
+	background-color: var(--theme-colour--analogue3);
+}
+
+.output-div__tint10 {
+	background-color: var(--theme-colour--tint10);
+}
+
+.output-div__tint20 {
+	background-color: var(--theme-colour--tint20);
+}
+
+.output-div__tint25 {
+	background-color: var(--theme-colour--tint25);
+}
+
+.output-div__tint30 {
+	background-color: var(--theme-colour--tint30);
+}
+
+.output-div__tint40 {
+	background-color: var(--theme-colour--tint40);
+}
+
+.output-div__tint50 {
+	background-color: var(--theme-colour--tint50);
+}
+
+.output-div__tint60 {
+	background-color: var(--theme-colour--tint60);
+}
+
+.output-div__tint70 {
+	background-color: var(--theme-colour--tint70);
+}
+
+.output-div__tint80 {
+	background-color: var(--theme-colour--tint80);
+}
+
+.output-div__tint90 {
+	background-color: var(--theme-colour--tint90);
+}
+
+.output-div__shade10 {
+	background-color: var(--theme-colour--shade10);
+}
+
+.output-div__shade20 {
+	background-color: var(--theme-colour--shade20);
+}
+
+.output-div__shade25 {
+	background-color: var(--theme-colour--shade25);
+}
+
+.output-div__shade30 {
+	background-color: var(--theme-colour--shade30);
+}
+
+.output-div__shade40 {
+	background-color: var(--theme-colour--shade40);
+}
+
+.output-div__shade50 {
+	background-color: var(--theme-colour--shade50);
+}
+
+.output-div__shade60 {
+	background-color: var(--theme-colour--shade60);
+}
+
+.output-div__shade70 {
+	background-color: var(--theme-colour--shade70);
+}
+
+.output-div__shade80 {
+	background-color: var(--theme-colour--shade80);
+}
+
+.output-div__shade90 {
+	background-color: var(--theme-colour--shade90);
+}
+
+.output-div__tone10 {
+	background-color: var(--theme-colour--tone10);
+}
+
+.output-div__tone20 {
+	background-color: var(--theme-colour--tone20);
+}
+
+.output-div__tone25 {
+	background-color: var(--theme-colour--tone25);
+}
+
+.output-div__tone30 {
+	background-color: var(--theme-colour--tone30);
+}
+
+.output-div__tone40 {
+	background-color: var(--theme-colour--tone40);
+}
+
+.output-div__tone50 {
+	background-color: var(--theme-colour--tone50);
+}
+
+.output-div__tone60 {
+	background-color: var(--theme-colour--tone60);
+}
+
+.output-div__tone70 {
+	background-color: var(--theme-colour--tone70);
+}
+
+.output-div__tone80 {
+	background-color: var(--theme-colour--tone80);
+}
+
+.output-div__tone90 {
+	background-color: var(--theme-colour--tone90);
+}
+
+.output-div__class- {
+	background-color: var();
+}
+
+
+
+
+
+/* ================================================ */
+
+/**
+ * @section Form Inputs
+ * Styling for different form inputs.
+ */
 
 .section-input {
 	border-radius: var(--border-radius-value);
