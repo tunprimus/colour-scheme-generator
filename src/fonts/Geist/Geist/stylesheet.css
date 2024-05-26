@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-ExtraLight.eot');
+    src: local('Geist ExtraLight'), local('Geist-ExtraLight'),
+        url('Geist-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Geist-ExtraLight.woff2') format('woff2'),
+        url('Geist-ExtraLight.woff') format('woff'),
+        url('Geist-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-MediumItalic.eot');
+    src: local('Geist Medium Italic'), local('Geist-MediumItalic'),
+        url('Geist-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Geist-MediumItalic.woff2') format('woff2'),
+        url('Geist-MediumItalic.woff') format('woff'),
+        url('Geist-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-Italic.eot');
+    src: local('Geist Italic'), local('Geist-Italic'),
+        url('Geist-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Geist-Italic.woff2') format('woff2'),
+        url('Geist-Italic.woff') format('woff'),
+        url('Geist-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-Regular.eot');
+    src: local('Geist Regular'), local('Geist-Regular'),
+        url('Geist-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Geist-Regular.woff2') format('woff2'),
+        url('Geist-Regular.woff') format('woff'),
+        url('Geist-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-ThinItalic.eot');
+    src: local('Geist Thin Italic'), local('Geist-ThinItalic'),
+        url('Geist-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Geist-ThinItalic.woff2') format('woff2'),
+        url('Geist-ThinItalic.woff') format('woff'),
+        url('Geist-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-Bold.eot');
+    src: local('Geist Bold'), local('Geist-Bold'),
+        url('Geist-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Geist-Bold.woff2') format('woff2'),
+        url('Geist-Bold.woff') format('woff'),
+        url('Geist-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-Light.eot');
+    src: local('Geist Light'), local('Geist-Light'),
+        url('Geist-Light.eot?#iefix') format('embedded-opentype'),
+        url('Geist-Light.woff2') format('woff2'),
+        url('Geist-Light.woff') format('woff'),
+        url('Geist-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-Black.eot');
+    src: local('Geist Black'), local('Geist-Black'),
+        url('Geist-Black.eot?#iefix') format('embedded-opentype'),
+        url('Geist-Black.woff2') format('woff2'),
+        url('Geist-Black.woff') format('woff'),
+        url('Geist-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-Medium.eot');
+    src: local('Geist Medium'), local('Geist-Medium'),
+        url('Geist-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Geist-Medium.woff2') format('woff2'),
+        url('Geist-Medium.woff') format('woff'),
+        url('Geist-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-ExtraLightItalic.eot');
+    src: local('Geist ExtraLight Italic'), local('Geist-ExtraLightItalic'),
+        url('Geist-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Geist-ExtraLightItalic.woff2') format('woff2'),
+        url('Geist-ExtraLightItalic.woff') format('woff'),
+        url('Geist-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-BlackItalic.eot');
+    src: local('Geist Black Italic'), local('Geist-BlackItalic'),
+        url('Geist-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Geist-BlackItalic.woff2') format('woff2'),
+        url('Geist-BlackItalic.woff') format('woff'),
+        url('Geist-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-ExtraBoldItalic.eot');
+    src: local('Geist ExtraBold Italic'), local('Geist-ExtraBoldItalic'),
+        url('Geist-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Geist-ExtraBoldItalic.woff2') format('woff2'),
+        url('Geist-ExtraBoldItalic.woff') format('woff'),
+        url('Geist-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-SemiBoldItalic.eot');
+    src: local('Geist SemiBold Italic'), local('Geist-SemiBoldItalic'),
+        url('Geist-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Geist-SemiBoldItalic.woff2') format('woff2'),
+        url('Geist-SemiBoldItalic.woff') format('woff'),
+        url('Geist-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-ExtraBold.eot');
+    src: local('Geist ExtraBold'), local('Geist-ExtraBold'),
+        url('Geist-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Geist-ExtraBold.woff2') format('woff2'),
+        url('Geist-ExtraBold.woff') format('woff'),
+        url('Geist-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-BoldItalic.eot');
+    src: local('Geist Bold Italic'), local('Geist-BoldItalic'),
+        url('Geist-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Geist-BoldItalic.woff2') format('woff2'),
+        url('Geist-BoldItalic.woff') format('woff'),
+        url('Geist-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-LightItalic.eot');
+    src: local('Geist Light Italic'), local('Geist-LightItalic'),
+        url('Geist-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Geist-LightItalic.woff2') format('woff2'),
+        url('Geist-LightItalic.woff') format('woff'),
+        url('Geist-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-SemiBold.eot');
+    src: local('Geist SemiBold'), local('Geist-SemiBold'),
+        url('Geist-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Geist-SemiBold.woff2') format('woff2'),
+        url('Geist-SemiBold.woff') format('woff'),
+        url('Geist-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-Thin.eot');
+    src: local('Geist Thin'), local('Geist-Thin'),
+        url('Geist-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Geist-Thin.woff2') format('woff2'),
+        url('Geist-Thin.woff') format('woff'),
+        url('Geist-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
