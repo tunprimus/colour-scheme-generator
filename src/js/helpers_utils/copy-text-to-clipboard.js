@@ -1,6 +1,6 @@
 //@ts-check
 
-function copyToClipboard(str) {
+export function copyToClipboard(str) {
 	try {
 		if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
 			return navigator.clipboard.writeText(str);

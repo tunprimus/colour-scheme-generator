@@ -1,10 +1,11 @@
 //@ts-check
 
 /**
- * 
+ * @
  * @returns {boolean}
+ * @example console.log(isLocalStorageEnabled());
  */
-function isLocalStorageEnabled() {
+export function isLocalStorageEnabled() {
 	try {
 		const key = `__storage__test`;
 		window.localStorage.setItem(key, null);
@@ -15,13 +16,12 @@ function isLocalStorageEnabled() {
 	}
 }
 
-console.log(isLocalStorageEnabled());
-
 /**
  * 
  * @returns {boolean}
+ * @example console.log(isSessionStorageEnabled());
  */
-function isSessionStorageEnabled() {
+export function isSessionStorageEnabled() {
 	try {
 		const key = `__storage__test`;
 		window.sessionStorage.setItem(key, null);
@@ -31,5 +31,3 @@ function isSessionStorageEnabled() {
 		return false;
 	}
 }
-
-console.log(isSessionStorageEnabled());
