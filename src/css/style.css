@@ -1194,7 +1194,7 @@ select:disabled {
 	max-width: 80%;
 }
 
-.colour-slider-input__span {
+.colour-slider-input__output {
 	font-size: var(--fs-1);
 	font-weight: bold;
 }
