@@ -1180,6 +1180,16 @@ select:disabled {
 	flex: 1 1 var(--grid-min--3);
 }
 
+.colour-slider-input__wrapper {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.colour-slider__input {
+	flex-grow: 3;
+	max-width: 75%;
+}
+
 /**
  * @section Buttons
  * Styling for buttons.
