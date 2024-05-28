@@ -1078,6 +1078,7 @@ select:disabled {
 	font-size: var(--fs-2);
 	line-height: var(--minor-third);
 	text-align: center;
+	text-shadow: -0.0625rem -0.0625rem 0.0625rem var(--dual-theme-grey);
 	vertical-align: middle;
 }
 
