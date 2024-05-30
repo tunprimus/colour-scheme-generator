@@ -1343,7 +1343,7 @@ select:disabled {
 }
 
 .details[open] {
-	background-color: var(--theme-colour--analogue2, #FF00FF);
+	background-color: var(--accent-2-light-theme, #070753);
 }
 
 .form-fieldset {
