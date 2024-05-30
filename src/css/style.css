@@ -446,13 +446,14 @@
 	--minor-second: 1.067;
 
 	--shadow-colour: hsl(var(--hue), 60%, 50%);
-	--shadow-start: 1px;
+	--shadow-start: 1rem;
 	--alpha-07: 0.70;
 	--alpha-03: 0.33;
 	--alpha-02: 0.20;
 
 	/* box-shadow: X-offset Y-offset Blur-size Colour*/
 	--box-shadow1: calc((var(--shadow-start) / 2) (var(--shadow-start) * var(--golden-ratio)) (var(--shadow-start) * var(--golden-ratio))) hsla(var(--shadow-colour), var(--alpha-07));
+	--box-shadow1: var(--golden-ratio) calc(var(--shadow-start) * var(--golden-ratio)) var(--golden-ratio)  black;
 	
 	--box-shadow1--animate: calc((var(--shadow-start) / 2) (var(--shadow-start) * var(--golden-ratio)) (var(--shadow-start) * var(--golden-ratio))) hsla(var(--shadow-colour), calc(var(--alpha-07) / 2));
 
@@ -1089,6 +1090,7 @@ select:disabled {
 	background-color: transparent;
 	padding: var(--responsive-space--XXXS);
 	border-radius: calc(var(--border-radius-value--S) + var(--responsive-space--XXXS));
+	box-shadow: -0.1875rem -0.1875rem 0.0625rem lightgrey, 0.1875rem 0.1875rem 0.0625rem var(--dual-theme-grey);
 }
 
 .section-output > * {
@@ -1369,6 +1371,7 @@ select:disabled {
 
 .details[open] {
 	background-color: var(--accent-2-light-theme, #070753);
+	box-shadow: -0.1875rem -0.1875rem 0.0625rem lightgrey, 0.1875rem 0.1875rem 0.0625rem var(--dual-theme-grey);
 }
 
 .form-fieldset {
