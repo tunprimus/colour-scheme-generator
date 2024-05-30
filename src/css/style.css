@@ -1364,9 +1364,9 @@ select:disabled {
 .details {
 	background-color: #EEEBDC;
 	border: 0.01rem solid var(--theme-colour--analogue1);
-	border-radius: calc(var(--border-radius-value) + var(--responsive-space--XXS)); /* https://twitter.com/lilykonings/status/1567317037126680576/photo/1 */
+	border-radius: calc(var(--border-radius-value) + var(--responsive-space--XXXS)); /* https://twitter.com/lilykonings/status/1567317037126680576/photo/1 */
 	box-shadow: var(--box-shadow1);
-	padding: var(--responsive-space--XXS);
+	padding: var(--responsive-space--XXXS);
 }
 
 .details[open] {
