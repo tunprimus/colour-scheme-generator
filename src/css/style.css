@@ -435,16 +435,6 @@
 	--accent-1-dark-theme: hsl(var(--hue), var(--sat), calc(var(--lig) + (2 * var(--lighten-percentage))));
 	--accent-2-dark-theme: hsl(var(--hue), calc(var(--sat) + var(--lighten-percentage)), calc(var(--lig) + (var(--golden-ratio) * var(--lighten-percentage))));
 
-	/**-- Change contrastThreshold to 50% when L value of colour equals 50% --**/
-	--contrast-threshold: 60%;
-	--switch: calc((var(--lig) - var(--contrast-threshold)) * -100);
-	--theme-text-colour: hsl(0, 0%, var(--switch));
-	--accessible-colour-rgb: calc(((((var(--red) * 299) + (var(--green) * 587) + (var(--blue) * 114)) / 1000) - 128) * -1000);
-
-	--accordion-border-colour: hsl(0, 0%, 50%);
-
-	--font-stack-body: system-ui, -apple-system, BlinkMacSystemFont, ̈́"Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, SFProDisplay-Regular, Inter, "Fira Sans", "Open Sans", "Droid Sans", "Nimbus Sans", "DejaVu Sans", "Helvetica Neue", Helvetica, Arial, Poppins, Verdana, Tahoma, Arimo, sans-serif;
-
 	/* General ratios */
 	--golden-ratio: 1.618;
 	--perfect-fifth: 1.500;
@@ -454,6 +444,35 @@
 	--minor-third: 1.200;
 	--major-second: 1.125;
 	--minor-second: 1.067;
+
+	--shadow-colour: hsl(var(--hue), 60%, 50%);
+	--shadow-start: 1px;
+	--alpha-07: 0.70;
+	--alpha-03: 0.33;
+	--alpha-02: 0.20;
+
+	/* box-shadow: X-offset Y-offset Blur-size Colour*/
+	--box-shadow1: calc((var(--shadow-start) / 2) (var(--shadow-start) * var(--golden-ratio)) (var(--shadow-start) * var(--golden-ratio))) hsla(var(--shadow-colour), var(--alpha-07));
+	
+	--box-shadow1--animate: calc((var(--shadow-start) / 2) (var(--shadow-start) * var(--golden-ratio)) (var(--shadow-start) * var(--golden-ratio))) hsla(var(--shadow-colour), calc(var(--alpha-07) / 2));
+
+	--box-shadow2: var(--shadow-start) calc((var(--shadow-start) * var(--golden-ratio)) (var(--shadow-start) * var(--golden-ratio))) hsla(var(--shadow-colour), var(--alpha-03)), calc((var(--shadow-start) * 2) (var(--shadow-start) * var(--golden-ratio) * 2) (var(--shadow-start) * var(--golden-ratio) * 2)) hsla(var(--shadow-colour), var(--alpha-03));
+
+	--box-shadow2--animate: var(--shadow-start) calc((var(--shadow-start) * var(--golden-ratio)) (var(--shadow-start) * var(--golden-ratio))) hsla(var(--shadow-colour), calc(var(--alpha-03) / 2)), calc((var(--shadow-start) * 2) (var(--shadow-start) * var(--golden-ratio) * 2) (var(--shadow-start) * var(--golden-ratio) * 2)) hsla(var(--shadow-colour), calc(var(--alpha-03) / 2));
+
+	--box-shadow3: var(--shadow-start) calc((var(--shadow-start) * var(--golden-ratio)) (var(--shadow-start) * var(--golden-ratio))) hsla(var(--shadow-colour), var(--alpha-02)), calc((var(--shadow-start) * 2) (var(--shadow-start) * var(--golden-ratio) * 2) (var(--shadow-start) * var(--golden-ratio) * 2)) hsla(var(--shadow-colour), var(--alpha-02)), calc((var(--shadow-start) * 4) (var(--shadow-start) * var(--golden-ratio) * 4) (var(--shadow-start) * var(--golden-ratio) * 4)) hsla(var(--shadow-colour), var(--alpha-02));
+
+	--box-shadow3--animate: var(--shadow-start) calc((var(--shadow-start) * var(--golden-ratio)) (var(--shadow-start) * var(--golden-ratio))) hsla(var(--shadow-colour), calc(var(--alpha-02) / 2)), calc((var(--shadow-start) * 2) (var(--shadow-start) * var(--golden-ratio) * 2) (var(--shadow-start) * var(--golden-ratio) * 2)) hsla(var(--shadow-colour), calc(var(--alpha-02) / 2)), calc((var(--shadow-start) * 4) (var(--shadow-start) * var(--golden-ratio) * 4) (var(--shadow-start) * var(--golden-ratio) * 4)) hsla(var(--shadow-colour), calc(var(--alpha-02) / 2));
+
+	/**-- Change contrastThreshold to 50% when L value of colour equals 50% --**/
+	--contrast-threshold: 60%;
+	--switch: calc((var(--lig) - var(--contrast-threshold)) * -100);
+	--theme-text-colour: hsl(0, 0%, var(--switch));
+	--accessible-colour-rgb: calc(((((var(--red) * 299) + (var(--green) * 587) + (var(--blue) * 114)) / 1000) - 128) * -1000);
+
+	--accordion-border-colour: hsl(0, 0%, 50%);
+
+	--font-stack-body: system-ui, -apple-system, BlinkMacSystemFont, ̈́"Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, SFProDisplay-Regular, Inter, "Fira Sans", "Open Sans", "Droid Sans", "Nimbus Sans", "DejaVu Sans", "Helvetica Neue", Helvetica, Arial, Poppins, Verdana, Tahoma, Arimo, sans-serif;
 
 	--min-font-size: 20;
 	--max-font-size: 32;
@@ -1068,6 +1087,8 @@ select:disabled {
 	align-items: stretch;
 	min-height: 45vh;
 	background-color: transparent;
+	padding: var(--responsive-space--XXXS);
+	border-radius: calc(var(--border-radius-value--S) + var(--responsive-space--XXXS));
 }
 
 .section-output > * {
