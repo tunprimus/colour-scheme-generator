@@ -1648,6 +1648,17 @@ input[type="radio"]:checked + label {
 .radio__label {
 	margin: var(--responsive-space--XXS);
 	border-radius: var(--responsive-space--XS);
+	position: relative;
+}
+
+input[type="radio"] + label::after {
+	position: absolute;
+	content: "\00A0 \00A0 \00A0 \00A0 \00A0";
+	top: 15%;
+	right: 1%;
+	background-color: var(--radio-colour-hsl);
+	border: 0.0625rem solid var(--dual-theme-grey);
+	border-radius: calc(var(--border-radius-value) + var(--responsive-space--XS));
 }
 
 
